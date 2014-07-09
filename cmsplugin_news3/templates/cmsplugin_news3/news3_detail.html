@@ -1,0 +1,21 @@
+{% extends CMS_TEMPLATE %}
+{% load cms_tags %}
+{% load thumbnail %}
+{% load i18n %}
+
+{% block content %}
+<h1>{{ news.title }}</h1>
+{% if news.photo %}
+{% thumbnail news.photo '270x230' crop as photo %}
+<img src="{{ photo.url }}" width="{{ photo.width }}" height="{{ photo.height }}" alt="{{ news.title }}" />
+{% endif %}
+<p>
+    <span class="date">{{ news.pub_date }}</span><br/>
+{% if news.author %}
+    <span class="author">{{ news.author.get_full_name }}</span><br/>
+{% endif %}
+    {{ news.content|safe }}
+</p>
+
+<a href="{% url 'cmsplugin_news3:news3_archive' %}">{% trans "All news" %}</a>
+{% endblock %}

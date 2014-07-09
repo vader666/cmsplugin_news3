@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load  thumbnail %}
+
+<h2>{% trans "Latest news" %}</h2>
+<ul>
+{% for news in latest %}
+    <li>
+        <h4>{{ news.title }}</h4>
+        {% if news.photo %}
+            {% if forloop.first %}
+                {% thumbnail news.photo '270x230' crop as photo %}
+            {% else %}
+                {% thumbnail news.photo '150x110' crop as photo %}
+            {% endif %}
+            <img src="{{ photo.url }}" width="{{ photo.width }}" height="{{ photo.height }}" alt="{{ news.title }}" />
+        {% endif %}
+        <div>{{ news.excerpt }}</div>
+        <a href="{{ news.get_absolute_url }}">{% trans "read more..." %}</a>
+    </li>
+{% empty %}
+    <li>{% trans "No news yet" %}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'cmsplugin_news3:news3_archive' %}">{% trans "All news" %}</a>

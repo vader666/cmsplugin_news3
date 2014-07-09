@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-08 20:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: admin.py:46
+msgid "You do not have permission to save published news articles."
+msgstr "У вас нет прав сохранять опубликованные новости."
+
+#: admin.py:61
+msgid "You do not have permission to publish news articles."
+msgstr "У Вас нет прав публиковать новости."
+
+#: admin.py:64
+#, python-format
+msgid "%(count)d newsitem was published"
+msgid_plural "%(count)d newsitems where published"
+msgstr[0] "%(count)d новость опубликована"
+msgstr[1] "%(count)d новостей опубликовано"
+
+#: admin.py:68
+msgid "Publish selected news"
+msgstr "Опубликовать выбранные новости"
+
+#: admin.py:72
+msgid "You do not have permission to unpublish news articles."
+msgstr "У Вас нет прав снимать новости с публикации."
+
+#: admin.py:75
+#, python-format
+msgid "%(count)d newsitem was unpublished"
+msgid_plural "%(count)d newsitems where unpublished"
+msgstr[0] "%(count)d новость снята с публикации"
+msgstr[1] "%(count)d новостей снято с публикации"
+
+#: admin.py:79
+msgid "Unpublish selected news"
+msgstr "Снять новость с публикации"
+
+#: cms_app.py:10
+msgid "Latest News"
+msgstr "Последние новости"
+
+#: cms_plugins.py:13 templates/cmsplugin_news3/news3_latest.html:4
+msgid "Latest news"
+msgstr "Последние новости"
+
+#: cms_toolbar.py:14 models.py:44 models.py:45
+msgid "News"
+msgstr "Новости"
+
+#: cms_toolbar.py:16
+msgid "News list"
+msgstr "Список новостей"
+
+#: cms_toolbar.py:17
+msgid "Add news"
+msgstr "Добавить новость"
+
+#: menu.py:19
+msgid "News Navigation"
+msgstr "Навигация Новостей"
+
+#: models.py:27
+msgid "Title"
+msgstr "Заголовок"
+
+#: models.py:28
+msgid "Slug"
+msgstr ""
+
+#: models.py:30
+msgid ""
+"A slug is a short name which uniquely identifies the news item for this day"
+msgstr ""
+"Slug это уникальное короткое имя иденцифицирующее новость в указанный день"
+
+#: models.py:32
+msgid "Excerpt"
+msgstr "Выдержка"
+
+#: models.py:33
+msgid "Content"
+msgstr "Содержание"
+
+#: models.py:34
+msgid "Optional. Image for news article."
+msgstr "Необязательно. Изображение для новости."
+
+#: models.py:35
+msgid "Published"
+msgstr "Опубликовано"
+
+#: models.py:36
+msgid "Publication date"
+msgstr "Дата публикации"
+
+#: models.py:49
+msgid "Can publish/unpublish news article"
+msgstr "Может публиковать/снимать с публикации новости"
+
+#: models.py:69
+msgid "Numbers of news items to show"
+msgstr "Количество показываемых новостей"
+
+#: models.py:70
+msgid "Limits the number of items that will be displayed"
+msgstr "Ограничивает количество элементов, которое будет отображаться"
+
+#: templates/cmsplugin_news3/news3_archive.html:7
+#: templates/cmsplugin_news3/news3_detail.html:19
+#: templates/cmsplugin_news3/news3_latest.html:25
+msgid "All news"
+msgstr "Все новости"
+
+#: templates/cmsplugin_news3/news3_archive.html:18
+#: templates/cmsplugin_news3/news3_archive_day.html:11
+#: templates/cmsplugin_news3/news3_archive_month.html:11
+#: templates/cmsplugin_news3/news3_archive_year.html:11
+msgid "Read more"
+msgstr "Читать далее"
+
+#: templates/cmsplugin_news3/news3_archive.html:21
+#: templates/cmsplugin_news3/news3_latest.html:21
+msgid "No news yet"
+msgstr "Нет новостей"
+
+#: templates/cmsplugin_news3/news3_archive.html:25
+#: templates/cmsplugin_news3/news3_archive_day.html:18
+#: templates/cmsplugin_news3/news3_archive_month.html:18
+#: templates/cmsplugin_news3/news3_archive_year.html:18
+msgid "previous"
+msgstr "предыдущая"
+
+#: templates/cmsplugin_news3/news3_archive.html:27
+#: templates/cmsplugin_news3/news3_archive_day.html:20
+#: templates/cmsplugin_news3/news3_archive_month.html:20
+#: templates/cmsplugin_news3/news3_archive_year.html:20
+#, python-format
+msgid ""
+"\n"
+"        Page %(p_number)s of %(p_num_pages)s.\n"
+"    "
+msgstr ""
+"\n"
+"        Страница %(p_number)s из %(p_num_pages)s.\n"
+"    "
+
+#: templates/cmsplugin_news3/news3_archive.html:31
+#: templates/cmsplugin_news3/news3_archive_day.html:24
+#: templates/cmsplugin_news3/news3_archive_month.html:24
+#: templates/cmsplugin_news3/news3_archive_year.html:24
+msgid "next"
+msgstr "следующая"
+
+#: templates/cmsplugin_news3/news3_archive_day.html:6
+#: templates/cmsplugin_news3/news3_archive_month.html:6
+#: templates/cmsplugin_news3/news3_archive_year.html:6
+#, python-format
+msgid "News for %(t_date)s"
+msgstr "Новости за %(t_date)s"
+
+#: templates/cmsplugin_news3/news3_archive_day.html:14
+msgid "No news for this day"
+msgstr "Нет новостей за этот день"
+
+#: templates/cmsplugin_news3/news3_archive_month.html:14
+msgid "No news for this month"
+msgstr "Нет новостей за этот месяц"
+
+#: templates/cmsplugin_news3/news3_archive_year.html:14
+msgid "No news for this year"
+msgstr "Нет новостей за этот год"
+
+#: templates/cmsplugin_news3/news3_latest.html:18
+msgid "read more..."
+msgstr "читать далее..."

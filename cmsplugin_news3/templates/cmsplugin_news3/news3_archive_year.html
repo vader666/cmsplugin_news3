@@ -1,0 +1,29 @@
+{% extends CMS_TEMPLATE %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% blocktrans with year|date:"Y" as t_date %}News for {{ t_date }}{% endblocktrans %}</h1>
+{% for news in news3_list %}
+    <h4>{{ news.title }}</h4>
+    <p>{{ news.pub_date }}</p>
+    <p>{{ news.excerpt }}</p>
+    <a href="{{ news.get_absolute_url }}">{% trans "Read more" %}</a>
+    <hr>
+{% empty %}
+    <p>{% trans "No news for this year" %}</p>
+{% endfor %}
+{% if is_paginated %}
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+    {% endif %}
+    {% blocktrans with page_obj.number as p_number and paginator.num_pages as p_num_pages %}
+        Page {{ p_number }} of {{ p_num_pages }}.
+    {% endblocktrans %}
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+    {% endif %}
+{% endif %}
+
+<a href="{% url 'cmsplugin_news3:news3_archive' %}">{% trans "All news" %}</a>
+{% endblock %}

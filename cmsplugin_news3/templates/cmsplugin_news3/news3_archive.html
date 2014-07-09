@@ -1,0 +1,36 @@
+{% extends CMS_TEMPLATE %}
+{% load cms_tags %}
+{% load thumbnail %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "All news" %}</h1>
+{% for news in latest %}
+    <h4>{{ news.title }}</h4>
+    {% if news.photo %}
+        {% if forloop.first %}
+            {% thumbnail news.photo '150x110' crop as photo %}
+            <img src="{{ photo.url }}" width="{{ photo.width }}" height="{{ photo.height }}" alt="{{ news.title }}" />
+        {% endif %}
+    {% endif %}
+    <p>{{ news.pub_date }}</p>
+    <p>{{ news.excerpt }}</p>
+    <a href="{{ news.get_absolute_url }}">{% trans "Read more" %}</a>
+    <hr>
+{% empty %}
+    <p>{% trans "No news yet" %}</p>
+{% endfor %}
+{% if is_paginated %}
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+    {% endif %}
+    {% blocktrans with page_obj.number as p_number and paginator.num_pages as p_num_pages %}
+        Page {{ p_number }} of {{ p_num_pages }}.
+    {% endblocktrans %}
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+    {% endif %}
+{% endif %}
+
+<a href="{% url 'cmsplugin_news3:news3_archive' %}">{% trans "All news" %}</a>
+{% endblock %}

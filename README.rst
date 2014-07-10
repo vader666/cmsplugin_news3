@@ -22,7 +22,7 @@ Requirements
 
 Installation
 ------------
-* ``pip install link://from_github``
+* ``pip install -e git+https://github.com/vader666/cmsplugin_news3.git#egg=cmsplugin_news3``
 * add ``filer``, ``easy_thumbnails``, ``cmsplugin_news3`` to INSTALLED_APPS
 * run ``./manage.py syncdb`` and ``./manage.py migrate``
 * restart server 
@@ -30,7 +30,7 @@ Installation
 Usage
 -----
 * Create a page in cms, in the 'advanced settings' section of the admin for that page, for 'Navigation extenders' select 'News Navigation' and for application select 'Last News'.
-* Befor using the plugin, *make sure that the cms page was created!* The 'Last News' plugin you can insert into placeholder on any page.
+* Befor using the plugin, **make sure that the cms page was created!** The 'Last News' plugin you can insert into placeholder on any page.
 * Create a propper tepmplates for your site.
 
 Settings

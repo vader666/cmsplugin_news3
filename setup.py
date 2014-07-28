@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name='cmsplugin_news3',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     url='https://github.com/vader666/cmsplugin_news3',
     license='',
     author='Anton Chertikovtzev',
-    author_email='',
+    author_email='anton.chertikovtcev@gmail.com',
     description='News plugin and application for Django-CMS 3.x',
     classifiers=[
         'Development Status :: 3 - Alpha',

@@ -2,6 +2,9 @@
 cmsplugin-news3
 ===============
 
+.. image:: https://badge.fury.io/py/cmsplugin_news3.svg
+    :target: http://badge.fury.io/py/cmsplugin_news3
+    
 Description: A news application and plugin for Django-CMS 3
 
 Based on https://github.com/wildfish/cmsplugin_news
@@ -22,7 +25,7 @@ Requirements
 
 Installation
 ------------
-* ``pip install -e git+https://github.com/vader666/cmsplugin_news3.git#egg=cmsplugin_news3``
+* ``pip install cmsplugin_news3``
 * add ``filer``, ``easy_thumbnails``, ``cmsplugin_news3`` to INSTALLED_APPS
 * run ``./manage.py syncdb`` and ``./manage.py migrate``
 * restart server 
